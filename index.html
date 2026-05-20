@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2026 日本行程 - 每日內容</title>
+  <title>2026 日本親子行程 - 每日內容</title>
   <style>
     :root {
-      /* 色彩系統優化：提升清爽度與現代感 */
       --bg-color: #f1f5f9;
       --paper: #ffffff;
       --text-main: #334155;
@@ -22,7 +21,6 @@
       --timeline-line: #cbd5e1;
     }
 
-    /* 平滑捲動設定 */
     html {
       scroll-behavior: smooth;
     }
@@ -65,7 +63,6 @@
       font-size: 15px;
     }
 
-    /* 吸頂導覽列 (Sticky Navigation) */
     .nav-container {
       position: sticky;
       top: 10px;
@@ -113,8 +110,8 @@
       margin-bottom: 40px;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
       border: 1px solid var(--paper);
-      border-top: 6px solid var(--accent); /* 頂部強調線 */
-      scroll-margin-top: 100px; /* 預留給吸頂導覽列的空間 */
+      border-top: 6px solid var(--accent);
+      scroll-margin-top: 100px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -130,6 +127,8 @@
       border-bottom: 2px solid var(--border-light);
       padding-bottom: 20px;
       margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .day-header h2 {
@@ -191,7 +190,7 @@
       text-decoration: underline;
     }
 
-    /* 精緻化時間軸 (Timeline) */
+    /* Timeline */
     .timeline {
       list-style: none;
       padding-left: 14px;
@@ -216,7 +215,7 @@
       background: var(--paper);
       border: 3px solid var(--timeline-dot);
       border-radius: 50%;
-      box-shadow: 0 0 0 4px var(--paper); /* 遮蔽背後的直線 */
+      box-shadow: 0 0 0 4px var(--paper);
     }
     
     .time-badge {
@@ -229,9 +228,10 @@
       margin-right: 10px;
       font-size: 14px;
       letter-spacing: 0.5px;
+      display: inline-block;
     }
 
-    /* 表格美化 (Table) */
+    /* Table */
     .table-container {
       overflow-x: auto;
       margin-bottom: 24px;
@@ -281,7 +281,7 @@
       color: var(--text-heading);
     }
 
-    /* 待辦事項清單 (Task List) */
+    /* Task List */
     .task-list {
       list-style: none;
       padding-left: 0;
@@ -289,7 +289,7 @@
     
     .task-list li {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
       margin-bottom: 10px;
       padding: 10px 14px;
@@ -309,9 +309,10 @@
       height: 18px;
       accent-color: var(--accent);
       cursor: pointer;
+      margin-top: 4px;
     }
 
-    /* 雙欄排版 */
+    /* Grid */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -320,652 +321,4 @@
     
     @media (max-width: 768px) {
       .grid-2 { 
-        grid-template-columns: 1fr; 
-        gap: 0;
-      }
-      .day {
-        padding: 24px 20px;
-      }
-      .nav {
-        padding: 12px;
-      }
-    }
-
-    /* 列印樣式 */
-    @media print {
-      body { background: white; color: black; }
-      .nav-container, .sub, .chip { display: none; }
-      .wrap { padding: 0; max-width: 100%; }
-      .day {
-        box-shadow: none; border: none; border-bottom: 2px dashed #ccc;
-        border-radius: 0; padding: 10px 0 30px; margin-bottom: 20px;
-        page-break-inside: avoid;
-      }
-      .day:last-child { border-bottom: none; }
-      a { text-decoration: none; color: black; }
-      .table-container { box-shadow: none; border: 1px solid #ccc; }
-      th, td { border: 1px solid #ccc; }
-    }
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <div class="header-section">
-      <h1>2026 日本行程</h1>
-      <p class="sub">精緻排版版本，支援直接列印（Ctrl+P / Cmd+P）</p>
-
-      <div class="nav-container">
-        <nav class="nav">
-          <a href="#d0523">05/23 (六) 入境</a>
-          <a href="#d0524">05/24 (日) 幕張</a>
-          <a href="#d0525">05/25 (一) 往京都</a>
-          <a href="#d0526">05/26 (二) 經典散策</a>
-          <a href="#d0527">05/27 (三) 稻荷·奈良</a>
-          <a href="#d0528">05/28 (四) 嵐山</a>
-          <a href="#d0529">05/29 (五) 宇治·返程</a>
-          <a href="#d0530">05/30 (六) 回國</a>
-        </nav>
-      </div>
-    </div>
-
-    <section id="d0523" class="day">
-      <div class="day-header">
-        <h2>2026-05-23（六）東京入境日</h2>
-        <span class="chip">2026-05-23.md</span>
-      </div>
-      
-      <div class="grid-2">
-        <div>
-          <h3>今日重點</h3>
-          <ul>
-            <li>松山 07:20 -> 東京羽田 11:35（長榮）</li>
-            <li>入住前先放行李</li>
-            <li>祖師谷大藏站（超人力霸王）</li>
-          </ul>
-
-          <h3>旅行小貼士</h3>
-          <ul>
-            <li><strong>氣候：</strong>5 月底氣溫約 18-26 度，非常適合散步，穿件薄外套即可。</li>
-            <li><strong>交通：</strong>本次行程全程使用 Suica 或 ICOCA 即可搞定，不需額外購買通票。</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3>時間軸（建議）</h3>
-          <ul class="timeline">
-            <li><span class="time-badge">04:50</span> 起床與最終行李確認</li>
-            <li><span class="time-badge">05:40</span> 出發前往松山機場</li>
-            <li><span class="time-badge">06:10</span> 抵達機場，辦理報到與安檢</li>
-            <li><span class="time-badge">07:20</span> 航班起飛（松山 -> 羽田）</li>
-            <li><span class="time-badge">11:35</span> 抵達羽田</li>
-            <li><span class="time-badge">12:30</span> 前往飯店寄放行李</li>
-            <li><span class="time-badge">14:30</span> 前往祖師谷大藏站</li>
-            <li><span class="time-badge">18:30</span> 晚餐</li>
-            <li><span class="time-badge">20:30</span> 返回飯店</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>執行記錄表（地圖與花費）</h3>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>項目</th>
-              <th>Google Maps</th>
-              <th style="text-align: right;">預估交通費 (¥)</th>
-              <th style="text-align: right;">實際花費 (¥)</th>
-              <th>已支付</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>松山機場 -> 羽田機場</td>
-              <td><a href="https://www.google.com/maps/dir/?api=1&origin=Taipei+Songshan+Airport&destination=Haneda+Airport" target="_blank">路線</a></td>
-              <td class="num">0</td>
-              <td class="num"></td>
-              <td>[ ]</td>
-            </tr>
-            <tr>
-              <td>羽田機場 -> 東横INN浅草蔵前2</td>
-              <td><a href="https://www.google.com/maps/dir/?api=1&origin=Haneda+Airport&destination=Toyoko+Inn+Asakusa+Kuramae+No.2" target="_blank">路線</a></td>
-              <td class="num">0</td>
-              <td class="num"></td>
-              <td>[ ]</td>
-            </tr>
-            <tr>
-              <td>飯店 -> 祖師谷大藏站</td>
-              <td><a href="https://www.google.com/maps/dir/?api=1&origin=Toyoko+Inn+Asakusa+Kuramae+No.2&destination=Soshigaya-Okura+Station" target="_blank">路線</a></td>
-              <td class="num">0</td>
-              <td class="num"></td>
-              <td>[ ]</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="d0524" class="day">
-      <div class="day-header">
-        <h2>2026-05-24（日）千葉幕張親子日</h2>
-        <span class="chip">2026-05-24.md</span>
-      </div>
-      
-      <div class="grid-2">
-        <div>
-          <h3>今日重點</h3>
-          <ul>
-            <li>前往千葉幕張（親子組與參展組同車出發）</li>
-            <li><strong>親子主活動（三擇一）：</strong>
-              <ul>
-                <li><strong>Plan A：</strong> Kandu 兒童職業體驗（室內溫和、家長可休息）</li>
-                <li><strong>Plan B：</strong> Tondemi 室內運動場（極限放電，需達 110cm/20kg）</li>
-                <li><strong>Plan C：</strong> 幕張海濱公園（戶外踏青野餐、大草皮，視天氣機動）</li>
-              </ul>
-            </li>
-          </ul>
-
-          <h3>最晚出門時間</h3>
-          <ul>
-            <li><strong>去程：</strong>最晚 08:50 離開飯店，步行至藏前站</li>
-            <li><strong>回程：</strong>建議於 16:30 離開（避開商場與展館散場人潮），或吃完晚餐再走</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3>時間軸（實際車次對位）</h3>
-          <ul class="timeline">
-            <li><span class="time-badge">08:00</span> 早餐</li>
-            <li><span class="time-badge">08:50</span> 離開飯店，前往藏前站</li>
-            <li><span class="time-badge">09:01</span> 藏前出發（搭乘都營淺草線）</li>
-            <li><span class="time-badge">09:11</span> 淺草橋轉乘（搭乘 JR 總武線，09:37 抵達西船橋）</li>
-            <li><span class="time-badge">09:46</span> 西船橋轉乘（搭乘 JR 武藏野/京葉線）</li>
-            <li><span class="time-badge">09:55</span> <strong>親子組下車：</strong>抵達「幕張豐砂站」 (出站即達 Family Mall)</li>
-            <li><span class="time-badge">09:58</span> <strong>參展組下車：</strong>抵達「海濱幕張站」 (前往 JPGU 會場)</li>
-            <li><span class="time-badge">10:30</span> <strong>上午活動（視方案執行）：</strong><br>
-                <small style="color: var(--text-muted); display:block; margin-top:4px;">▶ A: 入場 Kandu 體驗<br>▶ B: 入場 Tondemi 運動<br>▶ C: 抵達海濱公園大草皮區</small>
-            </li>
-            <li><span class="time-badge">12:30</span> <strong>午餐時間：</strong><br>
-                <small style="color: var(--text-muted); display:block; margin-top:4px;">▶ A: 直接於 Kandu 園內家長座用餐<br>▶ B/C: AEON MALL Family Mall 3F 親子美食街<br>▶ C (進階): 於 AEON 超市買便當帶去公園野餐</small>
-            </li>
-            <li><span class="time-badge">14:00</span> 下午活動：商場逛街 或 Moff 動物咖啡廳</li>
-            <li><span class="time-badge">16:30</span> 兩組人馬於海濱幕張站或商場會合</li>
-            <li><span class="time-badge">18:30</span> 晚餐（幕張周邊 或 回東京市區）</li>
-            <li><span class="time-badge">20:30</span> 返回飯店</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>執行記錄表（地圖與花費）</h3>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>項目</th>
-              <th>交通路線建議</th>
-              <th style="text-align: right;">時間紀錄</th>
-              <th style="text-align: right;">預估交通費 (¥)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>去程</strong><br>(藏前 -> 幕張)</td>
-              <td>藏前(淺草線) -> 淺草橋(轉總武線) -> 西船橋(轉京葉線) -> 幕張豐砂 / 海濱幕張</td>
-              <td class="num">09:01 - 09:55</td>
-              <td class="num">660</td>
-            </tr>
-            <tr>
-              <td><strong>會合</strong><br>(豐砂 -> 海濱幕張)</td>
-              <td>若需會合，從「幕張豐砂站」搭京葉線至「海濱幕張站」僅需 1 站 (3分鐘)</td>
-              <td class="num">彈性</td>
-              <td class="num">150</td>
-            </tr>
-            <tr>
-              <td><strong>回程推薦</strong><br>(幕張 -> 藏前)</td>
-              <td><strong>避開東京站人潮走法：</strong><br>海濱幕張/幕張豐砂(京葉線) -> 八丁堀(轉日比谷線) -> 人形町(轉淺草線) -> 藏前</td>
-              <td class="num">約 55 分鐘</td>
-              <td class="num">760</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="d0525" class="day">
-      <div class="day-header">
-        <h2>2026-05-25（一）東京 ➔ 京都 ➔ 甜點與鴨川</h2>
-        <span class="chip">2026-05-25.md</span>
-      </div>
-      
-      <div class="grid-2">
-        <div>
-          <h3>今日重點</h3>
-          <ul>
-            <li>東京 -> 京都（車上享用鐵路便當）</li>
-            <li>行李使用 Crosta 代送服務，輕鬆逛街</li>
-            <li>大丸 HARBS 下午茶、錦市場、鴨川納涼床</li>
-          </ul>
-
-          <h3>最晚出門時間</h3>
-          <ul>
-            <li><strong>出發：</strong>09:00 由東橫INN 藏前2號 辦理退房出發</li>
-            <li><strong>新幹線：</strong>預計搭乘 10:10 於品川發車之班次</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3>時間軸（建議）</h3>
-          <ul class="timeline">
-            <li><span class="time-badge">09:00</span> 從 東橫INN 藏前2號 出發</li>
-            <li><span class="time-badge">10:10</span> 品川站 搭乘新幹線（車上享用鐵路便當）</li>
-            <li><span class="time-badge">12:20</span> 抵達京都車站，辦理 Crosta 行李代送服務</li>
-            <li><span class="time-badge">13:15</span> 搭乘地鐵烏丸線至「四條站」</li>
-            <li><span class="time-badge">13:30</span> HARBS (大丸京都店) 享用甜點與下午茶</li>
-            <li><span class="time-badge">15:30</span> 步行逛 錦市場（避開正午人潮）</li>
-            <li><span class="time-badge">17:00</span> 散步至 鴨川 四條大橋，欣賞 5 月限定納涼床風景</li>
-            <li><span class="time-badge">18:30</span> 晚餐：名代豬排 かつくら 或 東洋亭（西式漢堡排）</li>
-            <li><span class="time-badge">20:30</span> 返回飯店領取行李並入住</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>執行記錄表（地圖與花費）</h3>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>項目</th>
-              <th>交通工具 / 路線</th>
-              <th style="text-align: right;">預估費用 (¥)</th>
-              <th style="text-align: right;">實際花費 (¥)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>藏前 -> 品川</td>
-              <td>都營淺草線</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-            <tr>
-              <td>品川 -> 京都</td>
-              <td>新幹線（車上吃便當）</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-            <tr>
-              <td>京都站 -> 四條站</td>
-              <td>京都市營地鐵 烏丸線</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="grid-2">
-        <div>
-          <h3>住宿與備註</h3>
-          <ul>
-            <li><strong>住宿：</strong>東横INN京都五条大宮 (房型：豪華雙床房)</li>
-            <li><strong>行李代送：</strong>於京都車站辦理 Crosta，將行李直接送至飯店。</li>
-            <li><strong>用餐提醒：</strong>本次挑選的餐廳皆空間寬敞且無須預約，適合隨性入座。</li>
-          </ul>
-        </div>
-        <div>
-          <h3>待確認</h3>
-          <ul class="task-list">
-            <li><input type="checkbox" id="task25_1"><label for="task25_1">確認新幹線車票劃位狀況</label></li>
-            <li><input type="checkbox" id="task25_2"><label for="task25_2">確認 HARBS 排隊與備案</label></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="d0526" class="day">
-      <div class="day-header">
-        <h2>2026-05-26（二）經典京都深度散策</h2>
-        <span class="chip">2026-05-26.md</span>
-      </div>
-      
-      <div class="grid-2">
-        <div>
-          <h3>今日重點</h3>
-          <ul>
-            <li>清水寺（登高俯瞰京都新綠）、二年坂、三年坂</li>
-            <li>八坂神社、祇園花見小路</li>
-            <li>河原町商圈購物</li>
-          </ul>
-
-          <h3>最晚出門時間</h3>
-          <ul>
-            <li><strong>出發：</strong>09:00 由飯店出發</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3>時間軸（建議）</h3>
-          <ul class="timeline">
-            <li><span class="time-badge">09:00</span> 飯店出發</li>
-            <li><span class="time-badge">09:45</span> 抵達 清水寺，並順遊 二年坂、三年坂</li>
-            <li><span class="time-badge">12:30</span> 午餐：順正 書院 (清水店) 湯豆腐定食（免預約）</li>
-            <li><span class="time-badge">14:30</span> 漫步至 八坂神社、祇園 花見小路 散策</li>
-            <li><span class="time-badge">17:00</span> 河原町商圈 自由購物</li>
-            <li><span class="time-badge">19:00</span> 晚餐：壹錢洋食 或百貨公司美食街</li>
-            <li><span class="time-badge">20:30</span> 返回飯店</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>執行記錄表（地圖與花費）</h3>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>項目</th>
-              <th>交通工具 / 路線</th>
-              <th style="text-align: right;">預估費用 (¥)</th>
-              <th style="text-align: right;">實際花費 (¥)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>飯店 -> 清水寺</td>
-              <td>公車或計程車（視體力決定）</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-            <tr>
-              <td>河原町 -> 飯店</td>
-              <td>公車</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="d0527" class="day">
-      <div class="day-header">
-        <h2>2026-05-27（三）狐狸神與奈良小鹿</h2>
-        <span class="chip">2026-05-27.md</span>
-      </div>
-      
-      <div class="grid-2">
-        <div>
-          <h3>今日重點</h3>
-          <ul>
-            <li><strong>伏見稻荷大社</strong>：早點抵達拍攝千本鳥居空景</li>
-            <li><strong>奈良公園與東大寺</strong>：看大佛、餵小鹿</li>
-          </ul>
-
-          <h3>最晚出門時間</h3>
-          <ul>
-            <li><strong>出發：</strong>09:00 離開飯店前往伏見稻荷</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3>時間軸（建議）</h3>
-          <ul class="timeline">
-            <li><span class="time-badge">09:00</span> 飯店出發</li>
-            <li><span class="time-badge">09:20</span> 抵達 伏見稻荷大社（看千本鳥居）</li>
-            <li><span class="time-badge">11:30</span> 搭乘 JR 往奈良（車程約 35 分鐘）</li>
-            <li><span class="time-badge">12:15</span> 午餐：麵鬪庵 (豆皮巾著烏龍麵)</li>
-            <li><span class="time-badge">14:00</span> 奈良公園 餵鹿、東大寺 看大佛</li>
-            <li><span class="time-badge">17:30</span> 準備搭車返回京都車站</li>
-            <li><span class="time-badge">19:00</span> 晚餐：壽司之味（平價迴轉壽司）</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>執行記錄表（地圖與花費）</h3>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>項目</th>
-              <th>交通工具 / 路線</th>
-              <th style="text-align: right;">預估費用 (¥)</th>
-              <th style="text-align: right;">實際花費 (¥)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>飯店 -> 伏見稻荷</td>
-              <td>搭乘 JR 奈良線至「稻荷站」</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-            <tr>
-              <td>稻荷 -> 奈良</td>
-              <td>搭乘 JR 往奈良</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-            <tr>
-              <td>奈良 -> 京都站</td>
-              <td>搭乘 JR 奈良線 (都路快速)</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="d0528" class="day">
-      <div class="day-header">
-        <h2>2026-05-28（四）嵐山自然景觀</h2>
-        <span class="chip">2026-05-28.md</span>
-      </div>
-      
-      <div class="grid-2">
-        <div>
-          <h3>今日重點</h3>
-          <ul>
-            <li>嵐山：天龍寺、竹林小徑、渡月橋</li>
-            <li>嵐山公園悠閒散步或體驗足湯</li>
-          </ul>
-
-          <h3>最晚出門時間</h3>
-          <ul>
-            <li><strong>出發：</strong>09:00 離開飯店，搭 JR 往嵐山</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3>時間軸（建議）</h3>
-          <ul class="timeline">
-            <li><span class="time-badge">09:00</span> 飯店出發，搭 JR 往嵐山</li>
-            <li><span class="time-badge">10:15</span> 抵達並遊覽 天龍寺、竹林小徑、渡月橋</li>
-            <li><span class="time-badge">12:30</span> 午餐：嵯峨豆腐 三忠 或 嵐山大街小吃</li>
-            <li><span class="time-badge">15:00</span> 嵐山公園散步，或在嵐山站體驗「足湯」</li>
-            <li><span class="time-badge">17:00</span> 離開嵐山返回市區</li>
-            <li><span class="time-badge">18:00</span> 晚餐：モリタ屋 (Moritaya) 壽喜燒（看京都塔夜景）</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>執行記錄表（地圖與花費）</h3>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>項目</th>
-              <th>交通工具 / 路線</th>
-              <th style="text-align: right;">預估費用 (¥)</th>
-              <th style="text-align: right;">實際花費 (¥)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>飯店 -> 嵐山</td>
-              <td>JR 嵯峨野線至「嵯峨嵐山站」</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-            <tr>
-              <td>嵐山 -> 京都站</td>
-              <td>JR 嵯峨野線至「京都站」</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="d0529" class="day">
-      <div class="day-header">
-        <h2>2026-05-29（五）宇治抹茶 ➔ 返回品川</h2>
-        <span class="chip">2026-05-29.md</span>
-      </div>
-      
-      <div class="grid-2">
-        <div>
-          <h3>今日重點</h3>
-          <ul>
-            <li>前往宇治：平等院鳳凰堂、宇治川散步</li>
-            <li>品嚐中村藤吉本店抹茶甜點</li>
-            <li>京都車站最後採買 ➔ 新幹線回東京（入住藏前）</li>
-          </ul>
-
-          <h3>最晚出門時間</h3>
-          <ul>
-            <li><strong>出發：</strong>09:00 辦理退房並將行李寄放於車站</li>
-            <li><strong>新幹線：</strong>15:00 搭車返回東京</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3>時間軸（建議）</h3>
-          <ul class="timeline">
-            <li><span class="time-badge">09:00</span> 退房、行李寄放車站，搭 JR 往 宇治（約17分鐘）</li>
-            <li><span class="time-badge">10:00</span> 遊覽 平等院鳳凰堂（5月風景極美）、宇治川散策</li>
-            <li><span class="time-badge">11:30</span> 甜點時間：中村藤吉本店（抹茶名店）</li>
-            <li><span class="time-badge">13:30</span> 返回京都車站，最後採買伴手禮</li>
-            <li><span class="time-badge">15:00</span> 搭乘新幹線返回品川</li>
-            <li><span class="time-badge">17:30</span> 品川站轉搭淺草線，回到 藏前 飯店辦理入住</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>執行記錄表（地圖與花費）</h3>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>項目</th>
-              <th>交通工具 / 路線</th>
-              <th style="text-align: right;">預估費用 (¥)</th>
-              <th style="text-align: right;">實際花費 (¥)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>京都站 -> 宇治站</td>
-              <td>JR 奈良線</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-            <tr>
-              <td>京都站 -> 品川站</td>
-              <td>新幹線</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-            <tr>
-              <td>品川站 -> 藏前站</td>
-              <td>都營淺草線</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="grid-2">
-        <div>
-          <h3>住宿與備註</h3>
-          <ul>
-            <li><strong>住宿：</strong>東橫INN 淺草藏前2號</li>
-          </ul>
-        </div>
-        <div>
-          <h3>待確認</h3>
-          <ul class="task-list">
-            <li><input type="checkbox" id="task29_1"><label for="task29_1">確認回程新幹線座位（優先劃位）</label></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="d0530" class="day">
-      <div class="day-header">
-        <h2>2026-05-30（六）返程日</h2>
-        <span class="chip">2026-05-30.md</span>
-      </div>
-      
-      <div class="grid-2">
-        <div>
-          <h3>今日重點</h3>
-          <ul>
-            <li>東京 -> 羽田</li>
-            <li>羽田 15:05 起飛</li>
-          </ul>
-
-          <h3>最晚出門時間</h3>
-          <ul>
-            <li><strong>機場段：</strong>最晚 11:00 抵達羽田</li>
-            <li><strong>安檢段：</strong>最晚 14:00 完成安檢</li>
-          </ul>
-          
-          <h3>緩衝建議</h3>
-          <ul>
-            <li>返程日建議預留 60 分鐘給退稅、行李重整與排隊</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3>時間軸（建議）</h3>
-          <ul class="timeline">
-            <li><span class="time-badge">07:30</span> 早餐</li>
-            <li><span class="time-badge">08:30</span> 退房與行李整理</li>
-            <li><span class="time-badge">10:30</span> 由藏前飯店出發前往羽田機場</li>
-            <li><span class="time-badge">11:30</span> 抵達機場</li>
-            <li><span class="time-badge">12:00</span> 辦理報到與託運</li>
-            <li><span class="time-badge">13:00</span> 午餐</li>
-            <li><span class="time-badge">14:00</span> 安檢與登機門等待</li>
-            <li><span class="time-badge">15:05</span> 起飛回國</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>執行記錄表（地圖與花費）</h3>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>項目</th>
-              <th>交通工具 / 路線</th>
-              <th style="text-align: right;">預估費用 (¥)</th>
-              <th style="text-align: right;">實際花費 (¥)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>藏前站 -> 羽田機場</td>
-              <td>都營淺草線（直通運轉京急本線）</td>
-              <td class="num"></td>
-              <td class="num"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-  </main>
-</body>
-</html>
+        grid-template-columns:
